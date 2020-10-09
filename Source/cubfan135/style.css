@@ -341,3 +341,8 @@ body.dark .area::placeholder {
   filter: sepia(180%);
   outline: none;
 }
+
+#enhanceBg.is-true {
+  background-color: var(--themeColor);
+  color: white;
+}
