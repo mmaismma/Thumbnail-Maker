@@ -1,4 +1,5 @@
 const bgInput = document.getElementById("bgInput");
+const bgInputLabel = document.getElementById("bgInputLabel");
 const epNumSelector = document.getElementById("epNumSelector");
 const hcLogoToggler = document.getElementById("hcLogoToggler");
 
@@ -11,6 +12,19 @@ const hc7Logo = new Image();
 hc7Logo.src =
   "https://hermit-tools.github.io/Thumbnail-Maker/Resources/Hermitcraft Logos/HC7 Logo.png";
 hc7Logo.crossOrigin = "Anonymous";
+
+//Focus Choose Background Label
+bgInputLabel.addEventListener("focus", (e) => {
+  e.preventDefault();
+});
+
+//Make Label Interactive
+bgInputLabel.addEventListener("keyup", (e) => {
+  if (e.key === "Enter" || e.key === "Spacebar" || e.key === " ") {
+    bgInput.click();
+  }
+});
+
 
 // Cookies Stuff
 downloader.addEventListener("click", () => {
