@@ -27,6 +27,10 @@ input[type="file"] {
   display: none;
 }
 
+input[type="range"] {
+  width: 15%;
+}
+
 .area {
   display: flex;
   align-items: center;
@@ -345,4 +349,12 @@ body.dark .area::placeholder {
 #enhanceBg.is-true {
   background-color: var(--themeColor);
   color: white;
+}
+
+#enhanceSettings {
+  display: none;
+}
+
+#enhanceBg.is-true ~ #enhanceSettings {
+  display: inline-block;
 }

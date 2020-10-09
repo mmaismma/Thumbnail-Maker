@@ -49,6 +49,12 @@
       <button class="area" onclick="javascript: bgInput.value = ''; process()" title="Removed background image">
         <i class="material-icons-outlined">close</i>
       </button>
+      
+      <span id="enhanceSettings">
+        <label for="brightBg">Brightness: </label><input type="range" min="100" max="150" value="115" id="brightBg" onchange="process()">
+        <label for="saturateBg">Saturation: </label><input type="range" min="100" max="150" value="115" id="saturateBg" onchange="process()">
+        <label for="contrastBg">Contrast: </label><input type="range" min="100" max="150" value="115" id="contrastBg" onchange="process()">
+      </span>
     </span>
 
     <input type="text" id="epNumSelector" class="area" autocomplete="off" oninput="process()" onclick="this.focus();this.select();" title="Enter episode number here. It can accept number, text or nothing." placeholder="Enter Episode Number">
