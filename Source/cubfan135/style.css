@@ -152,6 +152,22 @@ input[type="range"] {
   width: 0px;
 }
 
+#amplifyBg.is-true {
+  background-color: var(--themeColor);
+  color: white;
+}
+
+#amplifySettings {
+  display: none;
+}
+
+#amplifyBg.is-true~#amplifySettings {
+  grid-column: 1 / 4;
+  display: flex;
+  flex-direction: row;
+  place-content: center;
+}
+
 .mdc-switch::after {
   content: "";
   background: #ddd;
@@ -344,20 +360,4 @@ body.dark .area::placeholder {
 *:focus {
   filter: sepia(180%);
   outline: none;
-}
-
-#enhanceBg.is-true {
-  background-color: var(--themeColor);
-  color: white;
-}
-
-#enhanceSettings {
-  display: none;
-}
-
-#enhanceBg.is-true ~ #enhanceSettings {
-  grid-column: 1 / 4;
-  display: flex;
-  flex-direction: row;
-  place-content: center;
 }

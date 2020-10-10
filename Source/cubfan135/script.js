@@ -3,7 +3,7 @@ const bgInputLabel = document.getElementById("bgInputLabel");
 const epNumSelector = document.getElementById("epNumSelector");
 const hcLogoToggler = document.getElementById("hcLogoToggler");
 
-const enhanceBg = document.getElementById("enhanceBg");
+const amplifyBg = document.getElementById("amplifyBg");
 const brightBg = document.getElementById("brightBg");
 const saturateBg = document.getElementById("saturateBg");
 const contrastBg = document.getElementById("contrastBg");
@@ -57,7 +57,7 @@ function addBgImage() {
   let bgImage = new Image();
   bgImage.src = URL.createObjectURL(bgInput.files[0]);
   bgImage.onload = () => {
-    enhanceBg.classList.contains('is-true') ? ctx.filter = `saturate(${saturateBg.value}%) brightness(${brightBg.value}%) contrast(${contrastBg.value}%)` : null
+    amplifyBg.classList.contains('is-true') ? ctx.filter = `contrast(${contrastBg.value}%) brightness(${brightBg.value}%) saturate(${saturateBg.value}%)` : null
     ctx.drawImage(bgImage, 0, 0, 1920, 1080);
     ctx.filter = "none";
     hcLogoToggler.checked ? hcLogo() : null
