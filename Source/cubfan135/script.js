@@ -18,6 +18,10 @@ hc7Logo.src =
   "https://hermit-tools.github.io/Thumbnail-Maker/Resources/Hermitcraft Logos/HC7 Logo.png";
 hc7Logo.crossOrigin = "Anonymous";
 
+contrastBg.value = localStorage.getItem('ABcontrast') ?? 110;
+brightBg.value = localStorage.getItem('ABbrightness') ?? 110;
+saturateBg.value = localStorage.getItem('ABsaturation') ?? 110;
+
 //Focus Choose Background Label
 bgInputLabel.addEventListener("focus", (e) => {
   e.preventDefault();
@@ -114,6 +118,10 @@ function finishEditing() {
 
   downloader.download = `Ep${epNumSelector.value} HC7 Cub's Contraption.jpg`;
   downloader.href = canvas.toDataURL("image/png")
+
+  localStorage.setItem('ABcontrast', contrastBg.value)
+  localStorage.setItem('ABbrightness', brightBg.value)
+  localStorage.setItem('ABsaturation', saturateBg.value)
 }
 
 let keyCheat = [];
@@ -130,8 +138,8 @@ document.onkeydown = (e) => {
     keyCheat.join('') === "invert" ? (darken(), keyCheat = []) : null
   }
 }
- // Set Theme If Exists
- if (localStorage.getItem("theme")) {
+// Set Theme If Exists
+if (localStorage.getItem("theme")) {
   if (localStorage.getItem("theme") == "dark") {
     darken();
   }
