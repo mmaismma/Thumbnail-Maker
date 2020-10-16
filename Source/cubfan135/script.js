@@ -18,9 +18,9 @@ hc7Logo.src =
   "https://hermit-tools.github.io/Thumbnail-Maker/Resources/Hermitcraft Logos/HC7 Logo.png";
 hc7Logo.crossOrigin = "Anonymous";
 
-contrastBg.value = localStorage.getItem('ABcontrast') ? ? 115;
-brightBg.value = localStorage.getItem('ABbrightness') ? ? 115;
-saturateBg.value = localStorage.getItem('ABsaturation') ? ? 115;
+contrastBg.value = localStorage.getItem('ABcontrast') ?? 115;
+brightBg.value = localStorage.getItem('ABbrightness') ?? 115;
+saturateBg.value = localStorage.getItem('ABsaturation') ?? 115;
 
 //Focus Choose Background Label
 bgInputLabel.addEventListener("focus", (e) => {
