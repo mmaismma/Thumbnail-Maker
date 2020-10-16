@@ -18,9 +18,9 @@ hc7Logo.src =
   "https://hermit-tools.github.io/Thumbnail-Maker/Resources/Hermitcraft Logos/HC7 Logo.png";
 hc7Logo.crossOrigin = "Anonymous";
 
-contrastBg.value = localStorage.getItem('ABcontrast') ?? 110;
-brightBg.value = localStorage.getItem('ABbrightness') ?? 110;
-saturateBg.value = localStorage.getItem('ABsaturation') ?? 110;
+contrastBg.value = localStorage.getItem('ABcontrast') ? ? 115;
+brightBg.value = localStorage.getItem('ABbrightness') ? ? 115;
+saturateBg.value = localStorage.getItem('ABsaturation') ? ? 115;
 
 //Focus Choose Background Label
 bgInputLabel.addEventListener("focus", (e) => {
@@ -131,9 +131,11 @@ let oldTime = Date.now();
 document.onkeydown = (e) => {
   if (darkText.indexOf(e.key.toLowerCase()) !== -1) {
     let newTime = Date.now();
-    if (newTime - oldTime > 1000) { keyCheat = [] }
+    if (newTime - oldTime > 1000) {
+      keyCheat = []
+    }
     oldTime = newTime;
-  
+
     keyCheat.push(e.key.toLowerCase())
     keyCheat.join('') === "invert" ? (darken(), keyCheat = []) : null
   }
@@ -150,7 +152,7 @@ if (localStorage.getItem("theme")) {
 async function darken() {
   document.body.classList.toggle('dark')
   // Check Theme and Save in Local Storage
-  if(document.body.classList.contains("dark")) {
+  if (document.body.classList.contains("dark")) {
     localStorage.setItem("theme", "dark")
   } else {
     localStorage.setItem("theme", "light")

@@ -53,8 +53,8 @@ input[type="range"] {
   cursor: pointer;
   user-select: none;
   transition: all 0.1s ease,
-  background-color 500ms ease-out,
-  color 500ms ease-out;
+    background-color 500ms ease-out,
+    color 500ms ease-out;
 }
 
 #downloader {
@@ -96,7 +96,7 @@ input[type="range"] {
 }
 
 .material-icons-outlined {
-  font-size: inherit!important;
+  font-size: inherit !important;
   margin: 0 5px;
   vertical-align: text-top;
 }
