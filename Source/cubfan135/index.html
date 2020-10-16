@@ -36,7 +36,7 @@
   </section>
 
   <main id="form">
-    <span id="bgArea">
+    <section id="bgArea">
       <label id="bgInputLabel" class="area" for="bgInput" role="button" tabindex="0" title="Choose background image.">
         <i class="material-icons-outlined">publish</i> Choose Background
       </label>
@@ -59,22 +59,22 @@
         <label for="saturateBg">Saturation: </label><input type="range" min="100" max="150" value="115" id="saturateBg"
           onchange="process()">
       </span>
-    </span>
+    </section>
 
     <input type="text" id="epNumSelector" class="area" autocomplete="off" oninput="process()"
       onclick="this.focus();this.select();" title="Enter episode number here. It can accept number, text or nothing."
       placeholder="Enter Episode Number">
 
-    <span class="area" id="show-hc-logo" style="cursor: auto;">
+    <section class="area" id="show-hc-logo" style="cursor: auto;">
       <label for="hcLogoToggler" style="cursor: pointer;">Show HC7 Logo:</label>
       <input type="checkbox" checked id="hcLogoToggler" class="mdc-switch" onchange="process()">
-    </span>
+    </section>
 
     <a class="area" href="#" id="downloader" onclick="finishEditing()" style="text-decoration: none;">
       <i class="material-icons-outlined">get_app</i>Download Thumbnail
     </a>
 
-    <span id="etc">
+    <section id="etc">
       <button class="area" onclick="javascript: window.location = 'https\:\/\/github.com/hermit-tools/Thumbnail-Maker'"
         title="Check out the repository">
         <i class="material-icons-outlined">info</i>
@@ -87,7 +87,7 @@
         title="Clear canvas and start over">
         <i class="material-icons-outlined">backspace</i>
       </button>
-    </span>
+    </section>
   </main>
 
   <script src="./script.js"></script>
